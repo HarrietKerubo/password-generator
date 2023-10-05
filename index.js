@@ -1,3 +1,7 @@
+const genPassEl = document.querySelector("#genPass");
+const firstPasswordEl = document.querySelector("#first-pwd");
+const secondPasswordEl = document.querySelector("#second-pwd");
+
 const characters = [
   "A",
   "B",
@@ -91,3 +95,19 @@ const characters = [
   "?",
   "/",
 ];
+
+genPassEl.addEventListener("click", function () {
+  let randomArray = [];
+  firstPasswordEl.textContent = "";
+  secondPasswordEl.textContent = "";
+  for (let i = 0; i < characters.length; i++) {
+    let characterIndex = Math.floor(Math.random() * 91);
+    let randomCharacter = characters[characterIndex];
+    randomArray.push(randomCharacter);
+  }
+  let passwordOne = randomArray.slice(0, 15).join("");
+  let passwordTwo = randomArray.slice(16, 30).join("");
+
+  firstPasswordEl.innerHTML += `<p> ${passwordOne}</p>`;
+  secondPasswordEl.innerHTML += `<p> ${passwordTwo}</p>`;
+});
