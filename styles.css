@@ -83,3 +83,34 @@ hr{
       
 }
 
+@media (max-width: 500px){
+
+.hero{
+  width: 100%;
+
+ 
+}
+.generated-passwords {
+flex-direction: column;
+gap: 30px;
+}
+.pwd-container{
+  width: 250px;
+}
+
+hr{
+  width: 300px;
+}
+
+#header{
+width: 300px;
+font-size: 30px;
+line-height: 30px;
+}
+h3{
+ 
+  font-size: 18px;
+  line-height: 18px;
+
+ }
+}
